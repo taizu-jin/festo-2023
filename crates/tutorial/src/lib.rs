@@ -89,7 +89,7 @@ fn just_to_suffer_question_mark() -> usize {
             logs.next()
                 .expect("first element always present in the logs"),
         )
-        .expect("logs contain only valid ")
+        .expect("logs contain only valid keywords")
         {
             Action::Activate => State::Active,
             Action::Deactivate => State::Inactive,
@@ -99,7 +99,7 @@ fn just_to_suffer_question_mark() -> usize {
         };
 
         for entry in logs {
-            match Action::try_from(entry).expect("log contains valid keywords") {
+            match Action::try_from(entry).expect("log contains only valid keywords") {
                 Action::Activate => state = State::Active,
                 Action::Deactivate => state = State::Inactive,
                 Action::Flip => state.flip(),
@@ -110,7 +110,7 @@ fn just_to_suffer_question_mark() -> usize {
             result += id
                 .trim()
                 .parse::<usize>()
-                .expect("logs contain only valid ids");
+                .expect("logs contain only parsable numbers");
         }
     }
 
