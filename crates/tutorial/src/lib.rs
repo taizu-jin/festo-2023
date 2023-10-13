@@ -1,8 +1,6 @@
-#![allow(dead_code)]
-
 use std::fs::read_to_string;
 
-fn why_are_we_here() -> String {
+pub fn why_are_we_here() -> String {
     let mut result = String::from("");
 
     'outer: for line in read_to_string("../../input/01_keymaker_ordered.txt")
@@ -73,7 +71,7 @@ impl State {
     }
 }
 
-fn just_to_suffer_question_mark() -> usize {
+pub fn just_to_suffer_question_mark() -> usize {
     let mut result = 0;
 
     for line in read_to_string("../../input/03_trap_logs.txt")

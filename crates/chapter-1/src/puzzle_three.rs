@@ -1,5 +1,3 @@
-#![allow(dead_code)]
-
 use std::{collections::VecDeque, fs::read_to_string};
 
 pub fn solve() -> Option<usize> {

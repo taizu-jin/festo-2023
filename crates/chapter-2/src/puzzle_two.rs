@@ -1,5 +1,3 @@
-#![allow(dead_code)]
-
 use utils::device::Device;
 
 fn run(input: &str) -> String {
@@ -14,4 +12,3 @@ pub fn solve() -> String {
 
     format!("{}{}", first_result, second_result)
 }
-

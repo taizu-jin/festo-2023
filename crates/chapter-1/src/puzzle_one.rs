@@ -1,5 +1,3 @@
-#![allow(dead_code)]
-
 use std::{collections::HashMap, fs::read_to_string};
 
 #[derive(PartialEq, Eq, PartialOrd, Ord, Hash)]

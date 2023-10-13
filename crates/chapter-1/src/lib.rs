@@ -1,5 +1,5 @@
-mod puzzle_one;
-mod puzzle_three;
+pub mod puzzle_one;
+pub mod puzzle_three;
 
 #[cfg(test)]
 mod tests {
