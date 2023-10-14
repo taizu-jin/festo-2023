@@ -97,40 +97,41 @@ mod tests {
         assert_eq!(prime_factorizaton(39), vec![3, 13]);
         assert_eq!(prime_factorizaton(35), vec![5, 7]);
         assert_eq!(prime_factorizaton(6090), vec![2, 3, 5, 7, 29]);
+        assert_eq!(prime_factorizaton(110), vec![2, 5, 11]);
     }
 
     #[test]
     fn prime_factorization_balanced() {
         assert_eq!(prime_factorizaton(3 + 105), vec![2, 2, 3, 3, 3]);
         assert_eq!(prime_factorizaton(3 * 105), vec![3, 3, 5, 7]);
-        assert_eq!(prime_factorizaton(5 + 30 + 310), vec![3, 5, 23]);
-        assert_eq!(prime_factorizaton(5 * 30 * 310), vec![2, 2, 3, 5, 5, 5, 31]);
         assert_eq!(prime_factorizaton(3 + 12), vec![3, 5]);
         assert_eq!(prime_factorizaton(3 * 12), vec![2, 2, 3, 3]);
-        assert_eq!(prime_factorizaton(35 + 6090), vec![5, 5, 5, 7, 7]);
-        assert_eq!(prime_factorizaton(35 * 6090), vec![2, 3, 5, 5, 7, 7, 29]);
         assert_eq!(prime_factorizaton(2 + 30), vec![2, 2, 2, 2, 2]);
         assert_eq!(prime_factorizaton(2 * 30), vec![2, 2, 3, 5]);
         assert_eq!(prime_factorizaton(5 + 195), vec![2, 2, 2, 5, 5]);
         assert_eq!(prime_factorizaton(5 * 195), vec![3, 5, 5, 13]);
+        assert_eq!(prime_factorizaton(35 + 6090), vec![5, 5, 5, 7, 7]);
+        assert_eq!(prime_factorizaton(35 * 6090), vec![2, 3, 5, 5, 7, 7, 29]);
+        assert_eq!(prime_factorizaton(30 * 310 + 5 * 310 + 5 * 30), vec![2, 2, 2, 5, 5, 5, 11]);
+        assert_eq!(prime_factorizaton(5 * 30 * 310), vec![2, 2, 3, 5, 5, 5, 31]);
     }
 
     #[test]
     fn prime_factorization_unbalanced() {
-        assert_eq!(prime_factorizaton(2 + 6 + 210), vec![2, 109]);
-        assert_eq!(prime_factorizaton(2 * 6 * 210), vec![2, 2, 2, 3, 3, 5, 7]);
-        assert_eq!(prime_factorizaton(2 + 5 + 190), vec![197]);
-        assert_eq!(prime_factorizaton(2 * 5 * 190), vec![2, 2, 5, 5, 19]);
         assert_eq!(prime_factorizaton(3 + 54), vec![3, 19]);
         assert_eq!(prime_factorizaton(3 * 54), vec![2, 3, 3, 3, 3]);
-        assert_eq!(prime_factorizaton(2 + 7 + 70), vec![79]);
-        assert_eq!(prime_factorizaton(2 * 7 * 70), vec![2, 2, 5, 7, 7]);
         assert_eq!(prime_factorizaton(8 + 14), vec![2, 11]);
         assert_eq!(prime_factorizaton(8 * 14), vec![2, 2, 2, 2, 7]);
-        assert_eq!(prime_factorizaton(2 + 3 + 33), vec![2, 19]);
-        assert_eq!(prime_factorizaton(2 * 3 * 33), vec![2, 3, 3, 11]);
         assert_eq!(prime_factorizaton(42 + 1337), vec![7, 197]);
         assert_eq!(prime_factorizaton(42 * 1337), vec![2, 3, 7, 7, 191]);
+        assert_eq!(prime_factorizaton(6 * 210 + 2 * 210 + 6 * 2), vec![2, 2, 3, 3, 47]);
+        assert_eq!(prime_factorizaton(2 * 6 * 210), vec![2, 2, 2, 3, 3, 5, 7]);
+        assert_eq!(prime_factorizaton(5 * 190 + 2 * 190 + 2 * 5), vec![2, 2, 5, 67]);
+        assert_eq!(prime_factorizaton(2 * 5 * 190), vec![2, 2, 5, 5, 19]);
+        assert_eq!(prime_factorizaton(7 * 70 + 2 * 70 + 2 * 7), vec![2, 2, 7, 23]);
+        assert_eq!(prime_factorizaton(2 * 7 * 70), vec![2, 2, 5, 7, 7]);
+        assert_eq!(prime_factorizaton(3 * 33 + 2 * 33 + 2 * 3), vec![3, 3, 19]);
+        assert_eq!(prime_factorizaton(2 * 3 * 33), vec![2, 3, 3, 11]);
     }
 
     #[test]
